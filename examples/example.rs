@@ -1,3 +1,3 @@
-/* example.rs */ 
+/* example.rs */
 
 fn main() {}

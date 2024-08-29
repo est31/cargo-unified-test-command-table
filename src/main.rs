@@ -1,2 +1,2 @@
-/* main.rs */ 
+/* main.rs */
 fn main() {}

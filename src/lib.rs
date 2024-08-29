@@ -1,12 +1,12 @@
-/* lib.rs */ 
+/* lib.rs */
 
 /*!
     ```
-    /* doctest */ 
+    /* doctest */
     println!("hi");
     ```
 */
 #[cfg(test)]
 mod test {
-    /* lib_cfg_test */ 
+    /* lib_cfg_test */
 }
