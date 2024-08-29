@@ -25,6 +25,8 @@ function try_command_with_pattern {
 pattern_headings=("lib.rs" "main.rs" "lib.rs cfg test" "tests/" "benches/" "doctests")
 patterns=("lib.rs" "main.rs" "lib_cfg_test" "test.rs" "bench.rs" "doctest")
 
+commands=("cargo c" "cargo c --all-targets" "cargo t --no-run" "cargo t" "cargo t --all-targets" "cargo t --no-run --all-targets" "cargo t --doc")
+
 function try_command {
     say "  Trying command '$1' with patterns"
     local padding=30
@@ -52,7 +54,7 @@ function try_commands {
     done
     printf " |\n"
 
-    for command in "cargo c" "cargo c --all-targets" "cargo t --no-run" "cargo t" "cargo t --all-targets" "cargo t --no-run --all-targets" "cargo t --doc"; do
+    for command in "${commands[@]}"; do
         try_command "$command"
     done
 }
