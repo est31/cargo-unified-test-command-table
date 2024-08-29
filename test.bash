@@ -15,7 +15,7 @@ function try_command_with_pattern {
     $1 &> /dev/null
     local exit_code=$?
     say "    exit code: $exit_code"
-    prepare_pattern $2 " "
+    prepare_pattern $2 ""
     return $exit_code
 }
 
